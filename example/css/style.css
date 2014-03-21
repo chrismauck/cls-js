@@ -1,0 +1,159 @@
+/* ==========================================
+/
+/   GLOBAL RESET
+/
+========================================== */   
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout:none;
+  background:transparent;
+}
+
+sup {
+    position:relative;
+    display:inline-block;
+    vertical-align:top;
+    font-family: Arial;
+    font-size:60%;
+    margin:0.1em 0 0 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+strong { font-weight: bold; }
+
+::selection { background:transparent; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: transparent; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+a, a:active, a:visited { color: #fff; }
+a:hover {  }
+
+em { font-style: italic; }
+
+
+
+/* ==========================================
+/
+/   GLOBAL STYLES
+/
+========================================== */   
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: arial, helvetica, sans-serif;
+    color: #666;
+    background-color:#e5e5e5;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    margin: 0.5em 0 0.25em;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 1.5em;
+    margin: 0.25em 0 0.15em;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#main-nav {
+    position: absolute;
+    width: 100%;
+    height: 63px;
+    top: 0px;
+    left: 0px;
+    z-index: 900;
+    background-color: rgba(255,255,255,0.9);
+}
+
+    #main-nav .title {
+        position: relative;
+        width: 50%;
+    }
+
+    #toggle {
+        position: absolute;
+        background-color: transparent;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOAQMAAADzI2X3AAAABGdBTUEAALGPC/xhBQAAAAZQTFRFAAAAzMzMyE/AMgAAAAF0Uk5TAEDm2GYAAAASSURBVAjXY/j/v4EBhNEBAXEApfEO9cP7GW8AAAAASUVORK5CIIA=");
+        background-repeat: no-repeat;  
+        background-size: 26px 20px;
+        background-position: 18px 21px;
+        color: #ccc;
+        text-decoration: none;
+        top: 0px; 
+        right: 20px;
+        height: 63px;
+        width: 63px;
+        cursor: pointer;
+    }
+
+    #toggle:hover {
+        background-color: rgba(0,0,0,0.1);
+    }
+
+    #main-nav .title p {
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 63px;
+        color: #ccc;
+    }
+
+.site-width {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    clear: left;
+}
+
+#main-nav.visible {
+    opacity: 1;
+    -webkit-transform: translate(0,0px);
+}
+
+#main-nav.hidden {
+    opacity: 1;
+    -webkit-transform: translate(0,-63px);
+}
+
+
+#main-nav.detached {
+    position: fixed;
+    background-color: rgba(255,255,255,0.9);
+    -webkit-transition: -webkit-transform .1s,background .1s;
+}
+
+#mainContent {
+    position: relative;
+    margin-top: 80px;
+}
+
